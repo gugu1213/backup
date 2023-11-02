@@ -26,7 +26,7 @@ rules:
 - DOMAIN-SUFFIX,cmbchina.com,DIRECT
 - DOMAIN-SUFFIX,hostloc.com,DIRECT
 ##########规则解释##########
-##- OMAIN-SUFFIX,aaa.com,DIRECT #匹配，域名，直连
+##- OMAIN-SUFFIX,aaa.com,DIRECT #匹配域名后缀，域名，直连
 ##############################################################
 
 ##- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
