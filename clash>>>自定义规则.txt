@@ -20,17 +20,28 @@ rules:
 ##- SCRIPT,quic,REJECT #shortcuts rule
 ##- SCRIPT,time-limit,REJECT #shortcuts rule
 
+##- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
+##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
+##- DOMAIN-KEYWORD,google,Proxy #匹配域名关键字(交由Proxy代理服务器组)
+##- DOMAIN,google.com,Proxy #匹配域名(交由Proxy代理服务器组)
+##- DOMAIN-SUFFIX,ad.com,REJECT #匹配域名后缀(拒绝)
+##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
+##- SRC-IP-CIDR,192.168.1.201/32,DIRECT #匹配数据发起IP(直连)
+##- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
+##- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
+
 ##########################这一段是自用##########################
 ##########自用规则##########
 - DOMAIN-SUFFIX,pz907.com,DIRECT
 - DOMAIN-SUFFIX,cmbchina.com,DIRECT
 - DOMAIN-SUFFIX,hostloc.com,DIRECT
+- DOMAIN-SUFFIX,openai.com,ChatGPT
 ##########规则解释##########
-##- DIRECT
+##- DIRECT 直连
 ##- 直连
 ##- 
-##- Proxy
-##- 交由Proxy代理
+##- PROXY
+##- 交由PROXY代理
 ##- 
 ##- REJECT
 ##- 拒绝
@@ -44,16 +55,6 @@ rules:
 ##- DOMAIN-KEYWORD,google
 ##- 匹配域名关键字，匹配 google.com 和 google.jp
 ##############################################################
-
-##- PROCESS-NAME,curl,DIRECT #匹配路由自身进程(curl直连)
-##- DOMAIN-SUFFIX,google.com,Proxy #匹配域名后缀(交由Proxy代理服务器组)
-##- DOMAIN-KEYWORD,google,Proxy #匹配域名关键字(交由Proxy代理服务器组)
-##- DOMAIN,google.com,Proxy #匹配域名(交由Proxy代理服务器组)
-##- DOMAIN-SUFFIX,ad.com,REJECT #匹配域名后缀(拒绝)
-##- IP-CIDR,127.0.0.0/8,DIRECT #匹配数据目标IP(直连)
-##- SRC-IP-CIDR,192.168.1.201/32,DIRECT #匹配数据发起IP(直连)
-##- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
-##- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
 
 ##排序在上的规则优先生效,如添加（去除规则前的#号）：
 ##IP段：192.168.1.2-192.168.1.200 直连
