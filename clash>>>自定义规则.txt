@@ -32,10 +32,10 @@ rules:
 
 ##########################这一段是自用##########################
 ##########自用规则##########
-- DOMAIN-SUFFIX,pz907.com,DIRECT
 - DOMAIN-SUFFIX,cmbchina.com,DIRECT
 - DOMAIN-SUFFIX,hostloc.com,DIRECT
 - DOMAIN-SUFFIX,openai.com,ChatGPT
+- DOMAIN-KEYWORD,docker,节点选择
 ##########规则解释##########
 ##- DIRECT 直连
 ##- 直连
