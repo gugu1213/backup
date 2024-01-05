@@ -34,7 +34,8 @@ rules:
 ##########自用规则##########
 - DOMAIN-SUFFIX,cmbchina.com,DIRECT
 - DOMAIN-SUFFIX,hostloc.com,DIRECT
-- DOMAIN-SUFFIX,openai.com,ChatGPT
+- DOMAIN-SUFFIX,cloudflare.com,DIRECT
+- DOMAIN-SUFFIX,github.com,节点选择
 - DOMAIN-KEYWORD,docker,节点选择
 ##########规则解释##########
 ##- DIRECT 直连
