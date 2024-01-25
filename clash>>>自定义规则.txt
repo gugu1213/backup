@@ -30,13 +30,10 @@ rules:
 ##- DST-PORT,80,DIRECT #匹配数据目标端口(直连)
 ##- SRC-PORT,7777,DIRECT #匹配数据源端口(直连)
 
-##########################这一段是自用##########################
 ##########自用规则##########
 - DOMAIN-SUFFIX,cmbchina.com,DIRECT
 - DOMAIN-SUFFIX,hostloc.com,DIRECT
 - DOMAIN-SUFFIX,cloudflare.com,DIRECT
-- DOMAIN-SUFFIX,github.com,节点选择
-- DOMAIN-KEYWORD,docker,节点选择
 ##########规则解释##########
 ##- DIRECT 直连
 ##- 直连
